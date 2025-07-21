@@ -1,4 +1,4 @@
-# Rewards Redemption Web App
+# Rewards Redemption App
 
 This is a simple rewards redemption application built with **Ruby on Rails** (v8.0.2 / Ruby 3.4.3). The app allows users to:
 
@@ -7,8 +7,7 @@ This is a simple rewards redemption application built with **Ruby on Rails** (v8
 * Redeem rewards using their points
 * View a history of their redemptions
 
-> Database: SQLite (for ease of evaluation)
-> Frontend: Minimal web interface - CLI only
+> _Database: SQLite | Frontend: Minimal web interface - CLI only_
 
 ---
 
@@ -87,7 +86,7 @@ curl -X POST http://localhost:3000/redemptions \
 ### 6. View Redemption History
 
 ```bash
-curl http://localhost:3000/redemptions?user_id=1
+curl "http://localhost:3000/redemptions?user_id=1"
 ```
 
 ---
@@ -146,10 +145,10 @@ This makes it easy to test features like balance checking, redemption, and rewar
 
 ### Redemptions
 
-| Endpoint       | Method | Description                                    |
-| -------------- | ------ | ---------------------------------------------- |
-| `/redemptions` | GET    | Get redemption history (filtered by `user_id`) |
-| `/redemptions` | POST   | Redeem a reward for a user                     |
+| Endpoint                 | Method | Description                                    |
+| -------------------------| ------ | ---------------------------------------------- |
+| `/redemptions?user_id=<>`| GET    | Get redemption history (by `user_id`)          |
+| `/redemptions`           | POST   | Redeem a reward for a user                     |
 
 ---
 
@@ -183,8 +182,6 @@ Example:
 ---
 
 ## 📌 Notes
-
-* Authentication is not included, as per the scope.
 * The app is ready for extension with a frontend (React) or additional user features.
 
 ---
